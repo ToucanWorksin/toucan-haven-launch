@@ -7,11 +7,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img
-              src="/lovable-uploads/daf3c6f1-8aa1-4fcd-8d54-a3a187098e57.png"
-              alt="ToucanWorks"
-              className="w-10 h-10"
-            />
+            <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-soft">
+              <img
+                src="/lovable-uploads/daf3c6f1-8aa1-4fcd-8d54-a3a187098e57.png"
+                alt="ToucanWorks"
+                className="w-8 h-8 object-contain filter brightness-0 invert"
+              />
+            </div>
             <span className="text-2xl font-bold text-foreground">
               ToucanWorks
             </span>
