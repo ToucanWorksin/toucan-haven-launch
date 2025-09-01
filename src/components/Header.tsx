@@ -8,7 +8,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/lovable-uploads/8784a01a-5e6d-4626-93be-9401b4a956ef.png"
+              src="/lovable-uploads/061259f8-9f9a-4bb8-8333-ccd65ea98508.png"
               alt="ToucanWorks"
               className="h-10 object-contain"
             />

@@ -7,9 +7,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <img
-                src="/lovable-uploads/8784a01a-5e6d-4626-93be-9401b4a956ef.png"
+                src="/lovable-uploads/061259f8-9f9a-4bb8-8333-ccd65ea98508.png"
                 alt="ToucanWorks"
-                className="h-8 object-contain brightness-0 invert"
+                className="h-8 object-contain"
               />
             </div>
             <p className="text-white/80 max-w-sm">
