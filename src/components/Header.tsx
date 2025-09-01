@@ -6,17 +6,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center">
-              <img
-                src="/lovable-uploads/1cb103e4-75b7-4098-80f9-99f001d6ff0f.png"
-                alt="ToucanWorks"
-                className="w-10 h-10 object-contain"
-              />
-            </div>
-            <span className="text-2xl font-bold text-foreground">
-              ToucanWorks
-            </span>
+          <div className="flex items-center">
+            <img
+              src="/lovable-uploads/8784a01a-5e6d-4626-93be-9401b4a956ef.png"
+              alt="ToucanWorks"
+              className="h-10 object-contain"
+            />
           </div>
 
           {/* Navigation */}

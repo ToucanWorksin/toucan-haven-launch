@@ -21,9 +21,9 @@ const Mission = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-lg text-white/90 leading-relaxed">
-              To create safe, innovative, and inclusive furniture and toys using cutting-edge materials 
-              that foster creativity, learning, and joy in every child's life. We believe every child 
-              deserves access to products that are not just fun, but fundamentally safe and developmental.
+              To create flat-pack, slottable furniture and toys that grow with children, making assembly 
+              fun and tool-free. We believe every family deserves furniture that's easy to build, 
+              safe to use, and designed to adapt as children grow.
             </p>
           </div>
 
@@ -37,9 +37,9 @@ const Mission = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4 text-foreground">Our Vision</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              To become the world's leading innovator in child-centric design, revolutionizing how 
-              children interact with their environment. We envision a future where every piece of 
-              children's furniture and every toy is a gateway to discovery, growth, and boundless imagination.
+              To revolutionize how families experience furniture assembly by making it intuitive, 
+              engaging, and completely tool-free. We envision a world where children can actively 
+              participate in creating their own spaces, learning through hands-on building experiences.
             </p>
           </div>
         </div>

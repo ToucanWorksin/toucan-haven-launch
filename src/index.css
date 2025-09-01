@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 160 15% 15%;
 
-    --primary: 28 100% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 42 96% 55%;           /* Golden yellow primary */
+    --primary-foreground: 0 0% 100%;    /* White text on golden */
 
     --secondary: 160 30% 25%;
     --secondary-foreground: 0 0% 100%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 160 5% 95%;
     --muted-foreground: 160 10% 45%;
 
-    --accent: 28 90% 70%;
+    --accent: 42 90% 70%;            /* Lighter golden accent */
     --accent-foreground: 160 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,15 +34,15 @@ All colors MUST be HSL.
 
     --border: 160 15% 90%;
     --input: 160 15% 95%;
-    --ring: 28 100% 60%;
+    --ring: 42 96% 55%;              /* Golden ring */
 
-    /* ToucanWorks Brand Colors */
-    --toucan-orange: 28 100% 60%;
-    --toucan-orange-light: 28 100% 75%;
-    --toucan-orange-dark: 28 100% 45%;
-    --toucan-teal: 160 30% 25%;
-    --toucan-teal-light: 160 25% 35%;
-    --toucan-teal-dark: 160 35% 15%;
+    /* ToucanWorks Brand Colors - Updated to match logo */
+    --toucan-orange: 42 96% 55%;        /* Golden yellow from logo */
+    --toucan-orange-light: 46 100% 65%;  /* Lighter golden */
+    --toucan-orange-dark: 38 90% 45%;    /* Darker golden */
+    --toucan-teal: 166 82% 20%;          /* Dark teal from logo */
+    --toucan-teal-light: 166 65% 35%;    /* Lighter teal */
+    --toucan-teal-dark: 166 90% 15%;     /* Darker teal */
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--toucan-orange)) 0%, hsl(var(--toucan-orange-light)) 100%);
@@ -87,7 +87,7 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 28 100% 65%;
+    --primary: 42 96% 60%;           /* Golden yellow primary in dark mode */
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 160 20% 20%;
@@ -96,7 +96,7 @@ All colors MUST be HSL.
     --muted: 160 15% 15%;
     --muted-foreground: 160 10% 65%;
 
-    --accent: 28 90% 70%;
+    --accent: 42 90% 75%;            /* Lighter golden accent in dark mode */
     --accent-foreground: 160 15% 15%;
 
     --destructive: 0 62.8% 30.6%;
@@ -104,15 +104,15 @@ All colors MUST be HSL.
 
     --border: 160 20% 20%;
     --input: 160 20% 20%;
-    --ring: 28 100% 60%;
+    --ring: 42 96% 60%;              /* Golden ring in dark mode */
 
-    /* ToucanWorks Dark Mode Colors */
-    --toucan-orange: 28 100% 65%;
-    --toucan-orange-light: 28 100% 80%;
-    --toucan-orange-dark: 28 100% 50%;
-    --toucan-teal: 160 25% 30%;
-    --toucan-teal-light: 160 20% 40%;
-    --toucan-teal-dark: 160 30% 20%;
+    /* ToucanWorks Dark Mode Colors - Updated to match logo */
+    --toucan-orange: 42 96% 60%;        /* Slightly brighter golden in dark mode */
+    --toucan-orange-light: 46 100% 75%; /* Lighter golden */
+    --toucan-orange-dark: 38 90% 40%;   /* Darker golden */
+    --toucan-teal: 166 82% 25%;         /* Slightly brighter teal in dark mode */
+    --toucan-teal-light: 166 65% 40%;   /* Lighter teal */
+    --toucan-teal-dark: 166 90% 15%;    /* Darker teal */
 
     /* Dark Mode Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--toucan-orange)) 0%, hsl(var(--toucan-orange-light)) 100%);

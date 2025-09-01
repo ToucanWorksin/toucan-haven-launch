@@ -5,18 +5,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center">
-                <img
-                  src="/lovable-uploads/1cb103e4-75b7-4098-80f9-99f001d6ff0f.png"
-                  alt="ToucanWorks"
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
-              <span className="text-xl font-bold">ToucanWorks</span>
+            <div className="flex items-center">
+              <img
+                src="/lovable-uploads/8784a01a-5e6d-4626-93be-9401b4a956ef.png"
+                alt="ToucanWorks"
+                className="h-8 object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-white/80 max-w-sm">
-              Revolutionizing childhood through safe, innovative, and inclusive furniture and toys.
+              Flat-pack, slottable furniture and toys that grow with your children - easy to assemble, no tools required.
             </p>
             <div className="text-white/80">
               <p>📍 Coimbatore, India</p>

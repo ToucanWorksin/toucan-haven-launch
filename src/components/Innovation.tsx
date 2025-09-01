@@ -1,34 +1,34 @@
 const Innovation = () => {
   const features = [
     {
-      icon: "🛡️",
-      title: "Safety First",
-      description: "Every product undergoes rigorous testing with child-safe, non-toxic materials that exceed international safety standards."
+      icon: "🔧",
+      title: "No-Tools Assembly",
+      description: "Revolutionary slot-and-click design means no screws, no glue, no stress. Kids can even help assemble their own furniture!"
     },
     {
-      icon: "🌱",
-      title: "Sustainable Materials",
-      description: "Revolutionary bio-based composites and recycled materials that are both durable and environmentally responsible."
+      icon: "📦",
+      title: "Flat-Pack Design",
+      description: "Smart engineering allows complex furniture to pack flat for easy shipping and storage, then transform into sturdy pieces."
     },
     {
       icon: "🎨",
-      title: "Inclusive Design",
-      description: "Thoughtfully designed for children of all abilities, ensuring every child can play, learn, and grow together."
+      title: "Grows with Children",
+      description: "Modular components adapt and expand as your child grows, from toddler to teen - one investment, years of use."
     },
     {
-      icon: "🚀",
-      title: "Innovation Lab",
-      description: "Our R&D team continuously explores new materials and manufacturing techniques to push the boundaries of what's possible."
+      icon: "🔗",
+      title: "Slottable System",
+      description: "Ingenious slotting mechanism creates incredibly strong connections that can be assembled and reassembled countless times."
     },
     {
       icon: "🧠",
-      title: "Developmental Focus",
-      description: "Each product is designed with child development experts to enhance cognitive, physical, and emotional growth."
+      title: "Educational Assembly",
+      description: "Building furniture becomes a learning experience, developing problem-solving skills and spatial awareness."
     },
     {
       icon: "🌟",
       title: "Made in India",
-      description: "Proudly manufactured in Coimbatore with local craftsmanship, supporting communities while maintaining quality."
+      description: "Proudly manufactured in Coimbatore with precision engineering, supporting local innovation and craftsmanship."
     }
   ];
 
@@ -43,7 +43,7 @@ const Innovation = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're not just making furniture and toys—we're reimagining what childhood can be
+            We're revolutionizing furniture assembly - making it fun, fast, and frustration-free
           </p>
         </div>
 
@@ -70,14 +70,14 @@ const Innovation = () => {
               Coming Soon from Coimbatore, India
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
-              We're putting the finishing touches on our revolutionary product line. 
-              Join our community to be the first to experience the future of kids' furniture and toys.
+              Revolutionary flat-pack furniture that grows with your child. No tools, no fuss - 
+              just innovative design that makes assembly part of the fun.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-              <span className="px-4 py-2 bg-muted rounded-full">🏭 Advanced Manufacturing</span>
-              <span className="px-4 py-2 bg-muted rounded-full">🧪 Material Innovation</span>
-              <span className="px-4 py-2 bg-muted rounded-full">👶 Child Development</span>
-              <span className="px-4 py-2 bg-muted rounded-full">🌍 Global Standards</span>
+              <span className="px-4 py-2 bg-muted rounded-full">🔧 Tool-Free Assembly</span>
+              <span className="px-4 py-2 bg-muted rounded-full">📦 Flat-Pack Design</span>
+              <span className="px-4 py-2 bg-muted rounded-full">🔗 Slottable System</span>
+              <span className="px-4 py-2 bg-muted rounded-full">📏 Grows with Kids</span>
             </div>
           </div>
         </div>

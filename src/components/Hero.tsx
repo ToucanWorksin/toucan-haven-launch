@@ -27,8 +27,8 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Revolutionary toys and furniture designed with new-age materials, 
-                crafted for safety, inclusivity, and boundless imagination.
+                Flat-pack, slottable furniture and toys that grow with your children. 
+                No tools required - just slot, click, and play!
               </p>
             </div>
 
