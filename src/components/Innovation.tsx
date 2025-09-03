@@ -11,9 +11,9 @@ const Innovation = () => {
       description: "Smart engineering allows complex furniture to pack flat for easy shipping and storage, then transform into sturdy pieces."
     },
     {
-      icon: "🎨",
-      title: "Grows with Children",
-      description: "Modular components adapt and expand as your child grows, from toddler to teen - one investment, years of use."
+      icon: "🛡️",
+      title: "Safe for Children",
+      description: "Child-safe materials and rounded edges ensure your little ones can play and help assemble without any safety concerns."
     },
     {
       icon: "🔗",
