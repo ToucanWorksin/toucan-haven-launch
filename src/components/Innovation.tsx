@@ -63,24 +63,6 @@ const Innovation = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-card p-8 rounded-3xl shadow-soft border max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
-              Coming Soon from Coimbatore, India
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Revolutionary flat-pack furniture that grows with your child. No tools, no fuss - 
-              just innovative design that makes assembly part of the fun.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-              <span className="px-4 py-2 bg-muted rounded-full">🔧 Tool-Free Assembly</span>
-              <span className="px-4 py-2 bg-muted rounded-full">📦 Flat-Pack Design</span>
-              <span className="px-4 py-2 bg-muted rounded-full">🔗 Slottable System</span>
-              <span className="px-4 py-2 bg-muted rounded-full">📏 Grows with Kids</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
