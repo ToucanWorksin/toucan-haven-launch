@@ -91,7 +91,7 @@ const HowItWorks = () => {
         {/* Key Advantages */}
         <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Why Our System is Revolutionary
+            The ToucanWorks Difference
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -127,11 +127,11 @@ const HowItWorks = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-toucan-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">♻️</span>
+                <span className="text-2xl">🛡️</span>
               </div>
-              <h4 className="font-semibold text-lg mb-2 text-foreground">Reconfigurable</h4>
+              <h4 className="font-semibold text-lg mb-2 text-foreground">Durable & Safe</h4>
               <p className="text-muted-foreground text-sm">
-                Easily disassemble and rebuild in new configurations as your child grows and needs change.
+                Premium materials and precision engineering ensure furniture that's both sturdy and child-safe.
               </p>
             </div>
           </div>
