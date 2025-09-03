@@ -40,12 +40,40 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
+          {/* Email Subscription */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Stay Connected</h3>
             <p className="text-white/80">
               Be the first to hear about our revolutionary products and exclusive early access opportunities.
             </p>
+            
+            {/* Email Subscription Form */}
+            <div className="space-y-3">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15"
+                  id="email-subscribe"
+                />
+                <button
+                  onClick={() => {
+                    const emailInput = document.getElementById('email-subscribe') as HTMLInputElement;
+                    const email = emailInput?.value;
+                    if (email && email.includes('@')) {
+                      alert('Thank you for subscribing! We\'ll keep you updated.');
+                      emailInput.value = '';
+                    } else {
+                      alert('Please enter a valid email address.');
+                    }
+                  }}
+                  className="px-6 py-2 bg-toucan-orange text-white rounded-lg hover:bg-toucan-orange/90 transition-colors font-medium whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
                 <span className="text-sm">📧</span>
