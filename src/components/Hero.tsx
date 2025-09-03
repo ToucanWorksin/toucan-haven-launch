@@ -1,16 +1,58 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Handle subscription
-    console.log("Subscribing:", email);
-    setEmail("");
+    if (!email || isSubmitting) return;
+
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('email_subscriptions')
+        .insert([
+          { 
+            email: email.toLowerCase().trim(),
+            source: 'hero_form'
+          }
+        ]);
+
+      if (error) {
+        if (error.code === '23505') { // Unique constraint violation
+          toast({
+            title: "Already subscribed!",
+            description: "This email is already on our list. We'll keep you updated!",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Successfully subscribed!",
+          description: "We'll notify you when we launch. Thank you for your interest!",
+        });
+      }
+      
+      setEmail("");
+    } catch (error) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,8 +97,8 @@ const Hero = () => {
                   className="flex-1"
                   required
                 />
-                <Button type="submit" variant="toucan">
-                  Subscribe
+                <Button type="submit" variant="toucan" disabled={isSubmitting}>
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </Button>
               </form>
             </div>

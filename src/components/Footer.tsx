@@ -1,4 +1,65 @@
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubscribe = async () => {
+    if (!email || isSubmitting) return;
+
+    // Basic email validation
+    if (!email.includes('@')) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('email_subscriptions')
+        .insert([
+          { 
+            email: email.toLowerCase().trim(),
+            source: 'footer_form'
+          }
+        ]);
+
+      if (error) {
+        if (error.code === '23505') { // Unique constraint violation
+          toast({
+            title: "Already subscribed!",
+            description: "This email is already on our list. We'll keep you updated!",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Successfully subscribed!",
+          description: "We'll notify you when we launch. Thank you for your interest!",
+        });
+      }
+      
+      setEmail("");
+    } catch (error) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <footer className="bg-toucan-teal text-white py-16">
       <div className="container mx-auto px-4">
@@ -53,23 +114,17 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15"
-                  id="email-subscribe"
+                  onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
                 />
                 <button
-                  onClick={() => {
-                    const emailInput = document.getElementById('email-subscribe') as HTMLInputElement;
-                    const email = emailInput?.value;
-                    if (email && email.includes('@')) {
-                      alert('Thank you for subscribing! We\'ll keep you updated.');
-                      emailInput.value = '';
-                    } else {
-                      alert('Please enter a valid email address.');
-                    }
-                  }}
-                  className="px-6 py-2 bg-toucan-orange text-white rounded-lg hover:bg-toucan-orange/90 transition-colors font-medium whitespace-nowrap"
+                  onClick={handleSubscribe}
+                  disabled={isSubmitting}
+                  className="px-6 py-2 bg-toucan-orange text-white rounded-lg hover:bg-toucan-orange/90 transition-colors font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Subscribe
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </button>
               </div>
             </div>
