@@ -1,65 +1,7 @@
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
+import { useEmailSubscription } from "@/hooks/use-email-subscription";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubscribe = async () => {
-    if (!email || isSubmitting) return;
-
-    // Basic email validation
-    if (!email.includes('@')) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    try {
-      const { error } = await supabase
-        .from('email_subscriptions')
-        .insert([
-          { 
-            email: email.toLowerCase().trim(),
-            source: 'footer_form'
-          }
-        ]);
-
-      if (error) {
-        if (error.code === '23505') { // Unique constraint violation
-          toast({
-            title: "Already subscribed!",
-            description: "This email is already on our list. We'll keep you updated!",
-          });
-        } else {
-          throw error;
-        }
-      } else {
-        toast({
-          title: "Successfully subscribed!",
-          description: "We'll notify you when we launch. Thank you for your interest!",
-        });
-      }
-      
-      setEmail("");
-    } catch (error) {
-      console.error('Subscription error:', error);
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const { email, setEmail, isSubmitting, handleSubscribe } = useEmailSubscription('footer_form');
   return (
     <footer className="bg-toucan-teal text-white py-16">
       <div className="container mx-auto px-4">
@@ -118,6 +60,9 @@ const Footer = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15"
                   onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
+                  autoComplete="email"
+                  maxLength={254}
+                  required
                 />
                 <button
                   onClick={handleSubscribe}
