@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-white/80 max-w-sm">
-              Flat-pack, slottable furniture and toys that grow with your children - easy to assemble, no tools required.
+              Flat-pack, slottable furniture and toys designed for kids - easy to assemble, no tools required.
             </p>
             <div className="text-white/80">
               <p>📍 Coimbatore, India</p>

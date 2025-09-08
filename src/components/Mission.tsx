@@ -21,9 +21,9 @@ const Mission = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-lg text-white/90 leading-relaxed">
-              To create flat-pack, slottable furniture and toys that grow with children, making assembly 
+              To create flat-pack, slottable furniture and toys for children, making assembly 
               fun and tool-free. We believe every family deserves furniture that's easy to build, 
-              safe to use, and designed to adapt as children grow.
+              safe to use, and designed with kids in mind.
             </p>
           </div>
 

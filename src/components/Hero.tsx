@@ -20,7 +20,7 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Flat-pack, slottable furniture and toys that grow with your children. 
+                Flat-pack, slottable furniture and toys designed for kids. 
                 No tools required - just slot, click, and play!
               </p>
             </div>
